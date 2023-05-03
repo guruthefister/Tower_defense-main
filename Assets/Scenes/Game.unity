@@ -20220,6 +20220,8 @@ MonoBehaviour:
   range: 15
   enemyTag: Enemy
   partToRotate: {fileID: 766760507}
+  turnSpeed: 10
+  fireRate: 1
 --- !u!1001 &2003023313
 PrefabInstance:
   m_ObjectHideFlags: 0
