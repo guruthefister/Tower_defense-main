@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:096eb836eb8e56a211cf285c1a25e2b616562260ad8cb875199437a37c62c14a
-size 580
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Tile : MonoBehaviour {
+    [SerializeField] private Color _baseColor, _offsetColor;
+    [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] private GameObject _highlight;
+
+    public void Init(bool isOffset) {
+        _renderer.color = isOffset ? _offsetColor : _baseColor;
+    }
+
+    private void OnMouseEnter()
+    {
+        _highlight.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        _highlight.SetActive(false);
+    }
+}
