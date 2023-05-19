@@ -3299,6 +3299,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3364,14 +3365,31 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0.40557975, y: -0.579228, z: 0.40557975, w: 0.579228}
-  m_LocalPosition: {x: 23.7, y: 71.8, z: 8.5}
+  m_LocalRotation: {x: 0, y: -0.8433915, z: 0.53729963, w: 0}
+  m_LocalPosition: {x: 0, y: 66.8, z: 38.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 970190529}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 70, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 65, y: -180, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a98b9ad791c0940a341635c9a60eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panSpeed: 30
+  panBorderThickness: 10
+  minY: 20
+  maxY: 100
+  scrollSpeed: 5
 --- !u!4 &527510638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893867958152306382, guid: 7d6095208405af8498731723be265996, type: 3}
@@ -3868,14 +3886,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575798437}
-  m_LocalRotation: {x: 0.46076232, y: -0.3362949, z: 0.19415992, w: 0.7980638}
+  m_LocalRotation: {x: -0.20082612, y: -0.78471756, z: 0.44297093, w: -0.3842706}
   m_LocalPosition: {x: -341.1254, y: -430.85297, z: -341.9981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 970190529}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 60, y: -45.7, z: 0}
+  m_LocalEulerAnglesHint: {x: 58.164, y: -233.70801, z: -2.745}
 --- !u!4 &576579938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1893867958152306382, guid: 7d6095208405af8498731723be265996, type: 3}

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class KeyControll : MonoBehaviour {
+public class ChangeScene : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKey("p"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
