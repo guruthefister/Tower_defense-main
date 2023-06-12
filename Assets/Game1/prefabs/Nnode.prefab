@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7074785855812010030}
   - component: {fileID: -5333522205675837168}
   m_Layer: 0
-  m_Name: node
+  m_Name: Nnode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,4 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0, b: 0, a: 0.92156863}
-  positionOffset: {x: 0, y: 0.5, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
