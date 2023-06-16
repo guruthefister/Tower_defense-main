@@ -21,7 +21,7 @@ public class Turret : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public Vector3 Offset;
+    public Vector3 positionOffset;
 
     void Start()
     {
