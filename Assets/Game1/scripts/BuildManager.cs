@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
@@ -34,7 +35,7 @@ public class BuildManager : MonoBehaviour {
 
         PlayerStats.Money -= turretToBuild.cost;
 
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity); 
         node.turret = turret;
 
         GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
