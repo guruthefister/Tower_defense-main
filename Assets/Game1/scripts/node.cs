@@ -26,7 +26,7 @@ public class Node : MonoBehaviour {
     public Vector3 GetBuildPosition ()
     {
         var turretOffset = buildManager.turretToBuild.prefab.GetComponentInChildren<Turret>().positionOffset;
-        return transform.position + turretOffset;    
+        return transform.position + turretOffset; 
     }
 
     void OnMouseDown () 
