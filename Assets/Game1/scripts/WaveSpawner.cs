@@ -6,6 +6,7 @@ using System;
 public class WaveSpawner : MonoBehaviour
 {
     public Transform enemyPrefab;
+    public Transform enemy2Prefab;
 
     public Transform spawnPoint;
 
@@ -35,17 +36,21 @@ public class WaveSpawner : MonoBehaviour
     {
         waveIndex++;
         PlayerStats.Rounds++;
-
-        for (int i = 0; i < waveIndex; i++)
-        {
-            SpawnEnemy();
+        Transform prefab;
+        for (int i = 1; i < waveIndex+1; i++) {
+            prefab = enemyPrefab;
+            if (i % 3 == 0)
+            {
+                prefab = enemy2Prefab;
+            }
+            SpawnEnemy(prefab);
             yield return new WaitForSeconds(0.5f);
         }
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(Transform enemy)
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
     }
 
 }

@@ -3,11 +3,11 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool GameIsOver = false;
+    public static bool GameIsOver;
 
     public GameObject GameOverUI;
 
-    private void Start()
+    void Start()
     {
         GameIsOver = false;
     }
@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         if (GameIsOver)
             return;
 
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             EndGame();
         }
