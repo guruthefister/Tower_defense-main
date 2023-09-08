@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,6 +10,7 @@ public class Node : MonoBehaviour {
 
     [Header("Optional")]
     public GameObject turret;
+    public Vector3 turretPositionOffset;
 
     private Renderer rend;
     private Color startColor; 
@@ -23,9 +25,9 @@ public class Node : MonoBehaviour {
         buildManager = BuildManager.instance;
     }
 
-    public Vector3 GetBuildPosition ()
-    {
-        var turretOffset = buildManager.turretToBuild.prefab.GetComponentInChildren<Turret>().positionOffset;
+    public Vector3 GetBuildPosition (Vector3 positionOffset)
+    { 
+        var turretOffset = positionOffset;
         return transform.position + turretOffset; 
     }
 
@@ -34,14 +36,14 @@ public class Node : MonoBehaviour {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (!buildManager.CanBuild)
-            return;
-
         if (turret != null)
         {
-            Debug.Log("Can't build there! - TODO: Display on screen.");
+            buildManager.SelectNode(this);
             return;
         }
+        
+        if (!buildManager.CanBuild)
+            return;
 
         buildManager.BuildTurretOn(this);
     }

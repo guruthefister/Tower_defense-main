@@ -19,7 +19,6 @@ public class CanvasGizmoController : MonoBehaviour
             canvases.ForEach(canvas => { 
                 Outline outline = canvas.GetComponent<Outline>();
 
-                Debug.Log(outline);
                 if (outline != null)
                 {
                     outline.enabled = !outline.enabled;

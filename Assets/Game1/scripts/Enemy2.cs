@@ -65,7 +65,7 @@ public class Enemy2 : MonoBehaviour
 
     void EndPath() 
     {
-        PlayerStats.Health--;
+        PlayerStats.Health -= 2;
         Destroy(gameObject);
     }
 

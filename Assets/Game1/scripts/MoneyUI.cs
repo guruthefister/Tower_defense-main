@@ -8,10 +8,6 @@ public class MoneyUI : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        moneyText.text = PlayerStats.Money.ToString() + " $";
-
-        int charIndex = moneyText.text.IndexOf("$");
-        moneyText.text = moneyText.text.Replace(moneyText.text[charIndex].ToString(), "<color=#4DFF00>" + 
-            moneyText.text[charIndex].ToString() + "</color>");
+        moneyText.text = PlayerStats.Money.ToString() + " <color=#4DFF00>$</color>";
     }
 }
